@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int numberOne;
+		int numberTwo;
+		int numberThree;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Ingrese el primer número: ");
+		numberOne = sc.nextInt();
+		System.out.print("Ingrese el segundo número: ");
+		numberTwo = sc.nextInt();
+		System.out.print("Ingrese el tercer número: ");
+		numberThree = sc.nextInt();
+
+		char descendente;
+
+		System.out.print("Ingrese su decisión: [d] para descendente: ");
+		descendente = sc.next().charAt(0);
+
+		if (descendente == 'd') {
+			if ((numberOne > numberTwo) && (numberTwo > numberThree)) {
+				System.out.println(numberOne + " - " + numberTwo + " - " + numberThree);
+			}
+
+			else if ((numberOne > numberThree) && (numberThree > numberTwo)) {
+				System.out.println(numberOne + " - " + numberThree + " - " + numberTwo);
+			} else if ((numberTwo > numberOne) && (numberOne > numberThree)) {
+				System.out.println(numberTwo + " - " + numberOne + " - " + numberThree);
+
+			}
+
+			else if ((numberTwo > numberThree) && (numberTwo > numberOne)) {
+				System.out.println(numberTwo + " - " + numberThree + " - " + numberOne);
+
+			}
+
+			else if ((numberThree > numberOne) && (numberOne > numberTwo)) {
+				System.out.println(numberThree + " - " + numberOne + " - " + numberTwo);
+
+			}
+
+			else {
+				System.out.println(numberThree + " - " + numberTwo + " - " + numberOne);
+
+			}
+
+		  }
+                  
+                  else{
+                       System.out.println("Error de ingreso.");
+                  }
+
+	}
+
+}
