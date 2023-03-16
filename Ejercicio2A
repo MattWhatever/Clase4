@@ -1,0 +1,40 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class TesteoSumaArchivos {
+
+	public static void main(String[] args) {
+
+		TesteoSumaArchivos f = new TesteoSumaArchivos();
+
+		f.readtxt();
+
+	}
+
+	public void readtxt() {
+		Scanner sc = null;
+		try {
+			sc = new Scanner(new File("C:\\Users\\franc\\Desktop\\LaSuma.txt"));
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		int number, cont = 0;
+		int mult = 1;
+
+		while (sc.hasNext()) {
+			number = sc.nextInt();
+			cont += number;
+			mult *= number;
+
+			System.out.print(number + " ");
+
+		}
+
+		System.out.println("\nLa suma total es: " + cont);
+		System.out.println("La multiplicación es: " + mult);
+
+	}
+
+}
